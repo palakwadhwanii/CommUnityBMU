@@ -1,0 +1,62 @@
+[
+  {
+    "image": "/images/scimat logo.png",
+    "title": "Sci-Mat",
+    "description": "Scimat is a club at BML Munjal University that focuses on fostering a deeper understanding and appreciation of science and mathematics among students.",
+    "subtitle": "Your Gateway to Scientific Brilliance",
+    "members": 20,
+    "getInvolved": "Join the Social Media Club at BML Munjal University to enhance your digital marketing skills, create engaging content, and capture the pulse of campus life. Be part of a dynamic team that showcases the best of BMU to the world!",
+    "clubActivity": [
+      "/images/smc activity 1.jpg",
+      "/images/smc activity 2.jpg"
+    ]
+  },
+  {
+    "image": "/images/smc logo.png",
+    "title": "Social Media Club",
+    "description": "The Social Media Club at BML Munjal University captures and showcases all the happenings on campus, enhancing the college's digital presence.",
+    "subtitle": "Most Fun Club in the Uni",
+    "members": 20,
+    "getInvolved": "Join the Social Media Club at BML Munjal University to enhance your digital marketing skills, create engaging content, and capture the pulse of campus life. Be part of a dynamic team that showcases the best of BMU to the world!",
+    "clubActivity": [
+      "/images/smc activity 1.jpg",
+      "/images/smc activity 2.jpg"
+    ]
+  },
+  {
+    "image": "/images/pac logo.png",
+    "title": "PAC",
+    "description": "The Photography & Cinematography Club at BML Munjal University is dedicated to exploring and honing the art of visual storytelling through photography and film.",
+    "subtitle": "Lights, Camera & Action",
+    "members": 20,
+    "getInvolved": "Join the Social Media Club at BML Munjal University to enhance your digital marketing skills, create engaging content, and capture the pulse of campus life. Be part of a dynamic team that showcases the best of BMU to the world!",
+    "clubActivity": [
+      "/images/smc activity 1.jpg",
+      "/images/smc activity 2.jpg"
+    ]
+  },
+  {
+    "image": "/images/pfa logo.png",
+    "title": "PFA",
+    "description": "The Performing Arts is a club at BML Munjal University that focuses on your talent and appreciation.",
+    "subtitle": "Cheers to your talent",
+    "members": 20,
+    "getInvolved": "Join the Social Media Club at BML Munjal University to enhance your digital marketing skills, create engaging content, and capture the pulse of campus life. Be part of a dynamic team that showcases the best of BMU to the world!",
+    "clubActivity": [
+      "/images/smc activity 1.jpg",
+      "/images/smc activity 2.jpg"
+    ]
+  },
+  {
+    "image": "/images/robotic logo.png",
+    "title": "Robotics",
+    "description": "Robotics is a club at BML Munjal University that focuses on fostering a deeper understanding and appreciation of robots among students.",
+    "subtitle": "Robo Wars",
+    "members": 20,
+    "getInvolved": "Join the Social Media Club at BML Munjal University to enhance your digital marketing skills, create engaging content, and capture the pulse of campus life. Be part of a dynamic team that showcases the best of BMU to the world!",
+    "clubActivity": [
+      "/images/smc activity 1.jpg",
+      "/images/smc activity 2.jpg"
+    ]
+  }
+]

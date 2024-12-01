@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="events.css"> -->
+    <title>Document</title>
+  </head>
+
+  <style>
+    .eventRegisterButton {
+      background-color: #f05725;
+      border-radius: 25px;
+      color: #f0f0f0;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+      margin-top: 7px;
+      border: #f05725;
+      width: 250px;
+      text-align: center;
+      text-decoration: none;
+    }
+  </style>
+
+  <body>
+    <%- include('partials/navbar') %>
+    <section class="info-box">
+      <div class="info">
+        <h2>Upcoming Events</h2>
+        <p>Explore what's happening on your campus.</p>
+      </div>
+    </section>
+
+    <section class="upcoming-events">
+      <div class="carousel-container">
+        <div class="carousel" id="event-carousel">
+          <% events.forEach(event => { %>
+          <div class="event-card">
+            <img
+              src="<%= event.image %>"
+              alt="<%= event.title %>"
+              class="img2"
+            />
+            <div class="card_text1">
+              <h1><%= event.title %></h1>
+              <p><%= event.description %></p>
+              <div id="card_text2">
+                <h1><%= event.date %></h1>
+                <a class="eventRegisterButton" href="/register">Register Now</a>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+
+    <form action="/events" method="POST">
+      <input type="text" name="title" placeholder="Title" />
+      <input type="text" name="description" placeholder="Description" />
+      <input type="text" name="date" placeholder="Date" />
+      <input type="text" name="image" placeholder="Image URL" />
+      <button type="submit">Add Event</button>
+    </form>
+
+    <script>
+      const styleContent = `
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 5px;
+
+    background-color: #FFFFFF;
+    color: white;
+
+}
+
+.line{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 120px; 
+    width: 1200px;
+    height: 4px;
+    background-color: #F05725;
+    border-radius: 20px ;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-left: 49%;
+    padding: 0;
+}
+
+
+
+.logo img {
+    height: 60px;
+}
+
+
+.nav-links li a{
+    color: black;
+    margin: 0 30px;
+    font-size: larger;
+    font-weight: 700;
+
+}
+
+.nav-links li:hover {
+    
+    color:#F05725;
+    transform: translateY(-2px);
+    transition: all 100ms ease ;
+
+}
+.nav-links li a:hover {
+    
+    color:#F05725;
+    transform: translateY(-2px);
+    transition: all ease 100ms;
+
+}
+
+.login_img {
+    display: flex;
+    height: 55px;
+    margin-left: 0;
+
+
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.info-box {
+    margin-top: 10px;
+    padding: 30px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.info h2 {
+    font-family: "Rubik", sans-serif;
+
+
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-family: "Rubik", sans-serif;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    margin-top: 0;
+    padding: 30px;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column; /* Change direction to column for vertical scrolling */
+    width: 100%; /* Take full width */
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap */
+    justify-content: center;
+    gap: 50px;
+    width: 100%; /* Take full width */
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container1, .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.event-card {
+    width: 350px; /* Reduce card width */
+    height: 550px; /* Adjust height for three cards in a row */
+    background-color: rgb(255, 254, 254);
+    border: solid;
+    border-width: 1px;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+
+
+.event-card img {
+
+    width: 350px;
+    height: 300px;
+    border-radius: 32px;
+    /* margin-bottom: 0px; */
+}
+
+.card_text1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    font-family: "Rubik", sans-serif;
+
+}
+
+.event-card button {
+    background-color: #F05725;
+    border-radius: 25px;
+    color: #f0f0f0;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 7px;
+    border: #F05725;
+    width: 350px;
+}
+
+
+.event-card h1 {
+
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.event-card p {
+    text-align: left;
+    font-size: 13px;
+
+    padding: 10px;
+    margin-right: 10px;
+    line-height: 15px;
+
+}
+
+#card_text2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 12px;
+    font-family: "Rubik", sans-serif;
+    color: #F05725;
+    top: 150px;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.card_text1 button:hover {
+    background-color: #F05725;
+    border-radius: 25px;
+    color: #f0f0f0;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 7px;
+    border: #F05725;
+    transform: scale(0.95);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+  width: 90%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+form input:focus {
+  border-color: #f05725;
+  outline: none;
+  box-shadow: 0 0 5px rgba(240, 87, 37, 0.5);
+}
+
+form button {
+  background-color: #f05725;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
+}
+
+form button:hover {
+  background-color: #e0451f;
+  transform: scale(1.05);
+}
+
+
+        `;
+
+      const style = document.createElement("style");
+      style.textContent = styleContent;
+      document.head.appendChild(style);
+
+      // Typing effect for the "Upcoming Events" heading
+      document.addEventListener("DOMContentLoaded", function () {
+        const textElement = document.querySelector(".info h2"); // Target the h2 element in .info section
+        const textContent = textElement.textContent;
+        textElement.textContent = ""; // Clear original text
+
+        let index = 0;
+
+        function typeEffect() {
+          if (index < textContent.length) {
+            textElement.textContent += textContent.charAt(index);
+            index++;
+            setTimeout(typeEffect, 200); // Adjust typing speed (in ms) here
+          }
+        }
+
+        typeEffect();
+      });
+    </script>
+  </body>
+</html>

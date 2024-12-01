@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Page</title>
+    <link rel="stylesheet" href="/css/football.css" />
+    <link rel="stylesheet" href="/css/sports.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <section class="header-image">
+      <div class="search-container">
+        <h1>Find your Sport!</h1>
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            placeholder="Search for sports..."
+            id="search-bar"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="sports">
+      <h2>Sports</h2>
+      <a
+        href="https://calendar.google.com/calendar/u/0/r"
+        class="sports-calendar-link"
+        >Sports Calendar -></a
+      >
+
+      <div class="sport-grid">
+        <% sports.forEach((sport) => { %>
+        <div class="sport-item">
+          <a href="/sports/<%= sport._id %>">
+            <img src="<%= sport.image %>" alt="<%= sport.name %>" />
+            <p><%= sport.title %></p>
+            <p>Practice Time: <%= sport.practiceTime %></p>
+            <button class="register-button">Register Now</button>
+          </a>
+        </div>
+        <% }); %>
+      </div>
+    </section>
+<DIV class = "add-sport-form">
+    <form action="/sports" method="POST" class="add-sport-form">
+      <h2>Add a Sport</h2>
+      <label for="name">Sport Name</label>
+      <input type="text" id="name" name="title" required />
+
+      <label for="image">Image URL</label>
+      <input type="text" id="image" name="image" required />
+
+      <label for="practiceTime">Practice Time</label>
+      <input type="text" id="practiceTime" name="practiceTime" required />
+
+      <button type="submit">Add Sport</button>
+    </form>
+  </DIV>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("search-bar");
+        const sportItems = document.querySelectorAll(".sport-item");
+
+        searchInput.addEventListener("input", function () {
+          const searchText = searchInput.value.toLowerCase();
+
+          sportItems.forEach(function (item) {
+            const sportName = item.querySelector("p").textContent.toLowerCase();
+
+            if (sportName.includes(searchText)) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

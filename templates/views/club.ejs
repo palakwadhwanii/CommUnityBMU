@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= club.title %></title>
+    <link rel="stylesheet" href="/css/clubPage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <section class="club-header">
+      <div class="club-details">
+        <div class="club-info">
+          <img src="<%= club.image %>" alt="SMC Logo" class="club-logo" />
+          <div style="text-align: left">
+            <h1 class="club-heading"><%= club.title %></h1>
+            <p class="club-tagline"><%= club.subtitle %></p>
+            <p class="club-members"><%= club.members %></p>
+          </div>
+          <button class="join-btn" onclick="location.href='volunteer.html'">
+            Join
+          </button>
+        </div>
+      </div>
+      <div class="tab-links">
+        <a href="#" class="active">About</a>
+        <a href="#">Events</a>
+        <a href="#">Members</a>
+      </div>
+    </section>
+
+    <div class="main-container">
+      <section class="about-section" style="text-align: left">
+        <h2>About</h2>
+        <p><%= club.description %></p>
+        <div class="about-images">
+          <img src="<%= club.clubActivity[0] %>" alt="Club Activity 1" />
+          <img src="<%= club.clubActivity[1] %>" alt="Club Activity 2" />
+        </div>
+        <button class="events-btn">View All Events</button>
+      </section>
+
+      <section class="involved-section">
+        <h2>Get Involved</h2>
+        <p><%= club.getInvolved%></p>
+        <button class="join-now-btn">Join Now</button>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Social Media Club - BML Munjal University</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+
+  <body>
+    <%- include('partials/navbar') %>
+
+    <div class="container">
+      <div class="cartoon">
+        <img src="/images/cartoon.png" alt="Cartoon Character" />
+      </div>
+      <div class="form-container">
+        <div class="header">
+          <h1>Sign Up Here!</h1>
+        </div>
+
+        <form id="signupForm" action="/signup" method="POST">
+          <div class="form-group">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="mobile"
+              name="mobile"
+              placeholder="Enter your mobile number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="batch"
+              name="batch"
+              placeholder="Enter your batch"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your college email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="enrollment"
+              name="enrollment"
+              placeholder="Enter your enrollment number"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+          
+
+          <% if (error) { %>
+          <p class="error" id="errorMessage"><%= error %></p>
+          <% } %>
+
+          <button class="btn" type="submit">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

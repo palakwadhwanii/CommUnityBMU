@@ -1,0 +1,64 @@
+{
+    "sports": [
+        {
+            "name": "Cricket",
+            "image": "cricket.jpg",
+            "practiceTime": "2 Hours/day"
+        },
+        {
+            "name": "Football",
+            "image": "football.jpeg",
+            "practiceTime": "1.5 Hours/day"
+        },
+        {
+            "name": "Badminton",
+            "image": "badminton.jpg",
+            "practiceTime": "1 Hour/day"
+        },
+        {
+            "name": "Table Tennis",
+            "image": "table tennis.jpg",
+            "practiceTime": "2 Hours/day"
+        },
+        {
+            "name": "Lawn Tennis",
+            "image": "Lawn Tennis.jpg",
+            "practiceTime": "1.5 Hours/day"
+        },
+        {
+            "name": "Basketball",
+            "image": "Basketball.jpg",
+            "practiceTime": "1 Hour/day"
+        },
+        {
+            "name": "Volleyball",
+            "image": "volleyball.jpg",
+            "practiceTime": "1.5 Hours/day"
+        },
+        {
+            "name": "Hockey",
+            "image": "hockey.jpg",
+            "practiceTime": "2 Hours/day"
+        },
+        {
+            "name": "Swimming",
+            "image": "swimming.avif",
+            "practiceTime": "1 Hour/day"
+        },
+        {
+            "name": "Golf",
+            "image": "golf.jpg",
+            "practiceTime": "2 Hours/day"
+        },
+        {
+            "name": "Archery",
+            "image": "archery.avif",
+            "practiceTime": "1.5 Hours/day"
+        },
+        {
+            "name": "Karate",
+            "image": "karate.jpg",
+            "practiceTime": "1 Hour/day"
+        }
+    ]
+}

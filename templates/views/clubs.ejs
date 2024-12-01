@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clubs Page</title>
+    <link rel="stylesheet" href="/css/club.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <section class="header-image">
+      <div class="search-container">
+        <h1>Find your Club!</h1>
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="clubSearchInput"
+            placeholder="Search for clubs..."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="clubs">
+      <h2>Clubs</h2>
+      <div class="club-grid" id="clubList">
+        <% clubs.forEach(club => { %>
+        <div class="club-item">
+          <!-- Replace :id with the actual club._id -->
+          <a href="/clubs/<%= club._id %>">
+            <img src="<%= club.image %>" alt="<%= club.title %>" />
+          </a>
+          <p><%= club.title %></p>
+        </div>
+        <% }); %>
+      </div>
+    </section>
+<div class = add-club>
+    <section class="add-club">
+      
+      <form id="addClubForm" action="/clubs" method="POST">
+        <input
+          type="text"
+          id="newClubName"
+          placeholder="Club Name"
+          required
+          name="name"
+        />
+        <input
+          type="text"
+          id="newClubLogo"
+          placeholder="Club Logo URL"
+          required
+          name="imageurl"
+        />
+        <input
+          type="text"
+          id="newClubDescription"
+          placeholder="One-liner about the club"
+          required
+          name="description"
+        />
+        <input
+          type="number"
+          id="newClubMembers"
+          placeholder="Number of Members"
+          required
+          name="members"
+        />
+        <button type="submit">Add Club</button>
+      </form>
+    </section>
+  </div>
+
+    <script>
+      const searchInput = document.getElementById("clubSearchInput");
+      const clubItems = document.querySelectorAll(".club-item");
+
+      searchInput.addEventListener("input", () => {
+        const searchValue = searchInput.value.toLowerCase();
+        clubItems.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(searchValue)) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

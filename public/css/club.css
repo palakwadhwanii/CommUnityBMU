@@ -1,0 +1,459 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 5px;
+
+  background-color: #ffffff;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin-left: 49%;
+  padding: 0;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav-links li {
+  margin: 0 30px;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.login_img {
+  display: flex;
+  height: 5px;
+  margin-left: 0;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Default link color */
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* When the link is hovered */
+a:hover {
+  color: #ff8c00; /* Orange-like theme color */
+  transform: scale(1.5);
+}
+
+/* When the link is visited (after being clicked) */
+/* a:visited {
+    color: #000000; /* Same orange theme color */
+
+/* When the link is being actively clicked */
+a:active {
+  color: #000000; /* Slightly darker shade for active click */
+}
+
+/* Optional: To make it bold when hovered */
+a:hover,
+a:active {
+  font-weight: bold;
+}
+
+.logo {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between logo and menu */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+  color: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.header-image {
+  background-image: url("../images/club bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  border-radius: 5%;
+}
+.header-image {
+  background-image: url("../images/club bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center; /* Align the content vertically */
+  border-radius: 5%;
+  text-align: center; /* Center text */
+}
+
+.search-container {
+  background: rgba(0, 0, 0, 0.5); /* Add semi-transparent black background */
+  padding: 40px;
+  border-radius: 10px;
+  display: inline-block; /* Ensures the container is not stretched */
+  width: 400px;
+}
+
+.search-container h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold; /* Makes the font bold */
+  color: #fff; /* Sets the text color to white */
+  font-size: 50px; /* Increased size for better visibility */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+}
+
+.search-container input[type="text"] {
+  font-family: "Arial", sans-serif;
+  padding: 12px 20px;
+  width: 60%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+.search-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.search-wrapper input[type="text"] {
+  padding-left: 40px; /* Padding to make space for the lens icon */
+  font-family: "Arial", sans-serif;
+  padding: 12px 20px;
+  width: 91%; /* Increase the width to stretch the search bar */
+  max-width: 1000px; /* Optional: Limit the maximum width */
+  font-size: 18px; /* Slightly increase the font size */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-wrapper .fa-search {
+  position: absolute;
+  left: 15px; /* Position icon inside the input */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px; /* Adjust size of the lens icon */
+}
+
+.search-wrapper input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* .search-container {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        width: 500px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .search-container input[type="text"] {
+        font-family: 'Arial', sans-serif;
+        padding: 12px 20px;
+        width: 60%;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        outline: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .search-container input[type="text"]:focus {
+        border-color: #007bff;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+    
+    .search-container button {
+        padding: 12px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .search-container button:hover {
+        background-color: #0056b3;
+    }
+    
+    .search-container h1 {
+        font-family: 'Oswald', sans-serif;;
+        font: bolder;
+        color: #fff;
+        font-size: 40px;
+        margin-bottom: 20px;
+    } */
+/* 
+
+.search-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.search-container h1 {
+    font-family: 'Oswald', sans-serif;;
+    font: bolder;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+    
+    border: 1px solid #ccc
+    border-radius: 5px;
+} */
+
+.clubs {
+  text-align: center;
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.club-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .club-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .club-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .club-grid {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
+  }
+}
+
+.club-item img {
+  max-width: 150%;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 10%;
+}
+
+.club-item p {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Highlighted text */
+.highlight {
+  background-color: yellow;
+}
+
+/* Sticky navbar */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Makes the button round */
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
+
+.suggestions-container {
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  margin-top: 5px;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+
+.add-club {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-club button {
+  background-color: #f05725;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-club button:hover {
+  background-color: #e0451f;
+  transform: scale(1.05);
+}
+
+.add-club form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.add-club input {
+  width: 90%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.add-club input:focus {
+  border-color: #f05725;
+  outline: none;
+  box-shadow: 0 0 5px rgba(240, 87, 37, 0.5);
+}
+
+.add-club button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-club button[type="submit"]:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
